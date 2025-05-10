@@ -134,7 +134,9 @@ export default function MultipleChoiceQuiz() {
         Question {currentIndex + 1} of {questions.length}
       </h2>
       <p className="mb-6">Which category does this belong to?</p>
-      <p className="text-lg font-medium mb-6">{currentQuestion.text}</p>
+      {currentQuestion && (
+  <p className="text-lg font-medium">{currentQuestion.text}</p>
+)}
       <div className="flex flex-col gap-4">
         <button
           onClick={() => handleAnswer('Mandatory')}
