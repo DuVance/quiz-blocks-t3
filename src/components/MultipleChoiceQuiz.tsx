@@ -58,7 +58,9 @@ export default function MultipleChoiceQuiz() {
     setShowResult(false);
   };
 
-  const correctCount = answers.filter((ans, i) => ans === questions[i].correctCategory).length;
+  const correctCount = answers.filter(
+  (ans, i) => ans === questions[i]?.correctCategory
+).length;
 
   if (showResult) {
     const percentage = Math.round((correctCount / questions.length) * 100);
